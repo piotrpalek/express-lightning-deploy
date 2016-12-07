@@ -19,7 +19,7 @@ nconf.defaults({
 
   redis: {
     port: 6379,
-    host: '127.0.0.1',
+    host: process.env.DB_1_PORT_6379_TCP_ADDR,
   },
 });
 
