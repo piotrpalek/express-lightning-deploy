@@ -1,0 +1,13 @@
+web:
+  build: .
+  volumes:
+    - ".:/usr/src/app"
+  ports:
+    - "3800:3800"
+  links:
+    - "db:redis"
+
+db:
+  image: redis
+  ports:
+    - "6379:6379"
